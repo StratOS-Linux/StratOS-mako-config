@@ -10,7 +10,6 @@ depends=(
 )
 install=stratos-mako-config.install
 source=()
-md5sums=('SKIP')
 prepare() {
     cp -r "$startdir/.config/" "$srcdir/"
 }
