@@ -8,12 +8,14 @@ license=('GPL3')
 depends=(
     'mako'
 )
+install=stratos-mako-config.install
 source=('.config')
 md5sums=('SKIP')
+prepare() {
+    cp -r "$startdir/.config/" "$srcdir/"
+}
 
 package() {
     install -d "$pkgdir/etc/skel/.config"
     cp -r "$srcdir/.config/mako/" "$pkgdir/etc/skel/.config/"
-    echo "Configuration files have been copied to /etc/skel."
-    echo "You may copy these files to ~/.config/ and make any changes you wish."
 }

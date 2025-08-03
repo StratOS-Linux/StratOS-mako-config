@@ -1,0 +1,5 @@
+post_install() {
+  echo "==> Mako configuration has been installed to /etc/skel/.config/mako"
+  echo "==> To use it, copy it to your home directory:"
+  echo "    cp -r /etc/skel/.config/mako ~/.config/"
+}
